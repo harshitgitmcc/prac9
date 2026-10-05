@@ -1,0 +1,159 @@
+PRACTICAL 9 — ADVANCED jQuery
+
+IMPORTANT:
+Keep jquery-3.6.1.min.js in the same folder as the HTML file.
+
+Folder:
+
+Practical9/
+├── Pract9.html
+└── jquery-3.6.1.min.js
+
+
+1. jQuery EFFECT METHOD WITH CALLBACK FUNCTION
+
+Create:
+Pract9.html
+
+CODE:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic jQuery</title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("button").click(function () {
+        $("p").hide("slow", function () {
+            alert("The paragraph is now hidden");
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Aanchal:269704</p>
+<p>Welcome to MCC</p>
+
+<button>Click!</button>
+</body>
+</html>
+
+
+OUTPUT:
+Initially:
+
+Aanchal:269704
+Welcome to MCC
+Click!
+
+After clicking Click!:
+
+The paragraph is now hidden
+
+The paragraph gets hidden and the callback function displays the alert.
+
+
+2. jQuery TO GET AND SET TEXT CONTENT
+
+CODE:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic jQuery</title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        var str=$("p").text();
+        alert(str);
+    });
+    $("#b2").click(function(){
+        $("p").text("Hello World");
+    });
+});
+</script>
+</head>
+<body>
+<p>Aanchal:269704</p>
+<p>MongoDB</p>
+<button id="b1">Get</button>
+<button id="b2">Set</button>
+</body>
+</html>
+
+
+OUTPUT:
+Aanchal:269704
+MongoDB
+
+Get → Displays the text inside the paragraph in an alert.
+Set → Changes the paragraph text to:
+
+Hello World
+
+
+3. jQuery TO GET AND SET HTML CONTENT
+
+CODE:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Basic jQuery</title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#b1").click(function(){
+        var str=$("p").html();
+        alert(str);
+    });
+    $("#b2").click(function(){
+        $("p").html("<b>Hello World</b>");
+    });
+});
+</script>
+</head>
+<body>
+<p><b>Aanchal:</b> <u>269704</u></p>
+<p>MongoDB</p>
+<button id="b1">Get</button>
+<button id="b2">Set</button>
+</body>
+</html>
+
+
+OUTPUT:
+Aanchal:269704
+MongoDB
+
+Get → Gets the HTML content of the paragraph.
+
+Set → Changes the paragraph content to:
+
+Hello World
+
+"Hello World" appears in bold because <b> is used.
+
+
+HOW TO RUN:
+
+1. Create a folder named Practical9.
+2. Create Pract9.html.
+3. Put jquery-3.6.1.min.js in the same folder.
+4. Paste the required code.
+5. Save the file.
+6. Open Pract9.html in Chrome.
+7. Click the required button.
+8. Check the output.
+
+
+GITHUB STRUCTURE:
+
+Practical-9/
+│
+├── Pract9.html
+└── jquery-3.6.1.min.js
